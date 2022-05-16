@@ -70,26 +70,10 @@ function StatefulApp() {
             primary='first'
             style={{
               height: `calc(100vh - ${headerHeight}px)`,
-              background: 'transparent',
             }}
-            pane1Style={{ background: 'transparent' }}
           >
-            <Stack
-              style={{
-                height: `calc(100vh - ${headerHeight}px)`,
-              }}
-            >
-              <SplitPane
-                split='horizontal'
-                style={{
-                  height: `calc(100vh - ${headerHeight}px)`,
-                  background: 'transparent',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-                pane1Style={{ background: theme.sanity.bg }}
-                defaultSize={350}
-              >
+            <Stack>
+              <SplitPane split='horizontal' defaultSize={350}>
                 <EditorPane
                   value={query}
                   onKeyDown={onKeyDown}
